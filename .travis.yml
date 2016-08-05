@@ -1,9 +1,19 @@
-# Travis settings for
-# https://api.travis-ci.org/olir/codegenj.svg
-language: java
+sudo: required
+language: c
+
+compiler:
+  - gcc
+
 notifications:
   email: false
-after_success:
-  - mvn clean test jacoco:report 
-# saga:coverage coveralls:report
-# REMOVED cobertura:cobertura
+  
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get -y install bluetooth
+  - sudo apt-get -y install bluez-tools
+  - sudo apt-get -y install glib2.0
+  - sudo apt-get -y install libglib2.0-dev
+  - sudo apt-get -y install libdbus-1-dev
+  - sudo apt-get -y install libudev-dev
+  - sudo apt-get -y install libical-dev
+  - sudo apt-get -y install libreadline-dev
