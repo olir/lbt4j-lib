@@ -17,3 +17,5 @@ before_install:
   - sudo apt-get -y install libudev-dev
   - sudo apt-get -y install libical-dev
   - sudo apt-get -y install libreadline-dev
+
+script: mvn clean verify
