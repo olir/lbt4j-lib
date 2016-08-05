@@ -1,5 +1,5 @@
 sudo: required
-language: c
+language: java
 
 compiler:
   - gcc
@@ -18,4 +18,4 @@ before_install:
   - sudo apt-get -y install libical-dev
   - sudo apt-get -y install libreadline-dev
 
-script: mvn clean verify
+#script: mvn clean verify
