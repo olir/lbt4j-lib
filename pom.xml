@@ -145,7 +145,10 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  <configuration>
 					<target name="make">
 					  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
-					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni"/>
+					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni">
+						<arg value="clean"/>
+						<arg value="all"/>
+					  </exec>
 					</target>
 				  </configuration>
 				</execution>
