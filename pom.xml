@@ -1,0 +1,156 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Maven Coordinates -->
+	<groupId>de.serviceflow</groupId>
+	<artifactId>lbt4j-lib</artifactId>
+	<version>0.2.0</version>
+	<packaging>rar</packaging>
+
+	<prerequisites>
+		<maven>3.2.5</maven>
+	</prerequisites>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<scm>
+		<connection>scm:git:https://github.com/olir/lbt4j.git</connection>
+		<developerConnection>scm:git:https://github.com/olir/lbt4j.git</developerConnection>
+		<url>https://github.com/olir/lbt4j.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<!-- set version then mvn clean deploy, then check at https://oss.sonatype.org/ ,
+	     Select Staging Repositories, select entry, close, release. in case of error
+		 check http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22nexus-staging-maven-plugin%22 
+		 for latest version. -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
+
+
+	<!-- More Project Information -->
+	<name>lbt4j</name>
+	<description>lbt4j.</description>
+	<url>https://github.com/olir/lbt4j</url>
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>Oliver Rode</name>
+		<url>http://www.serviceflow.de/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>LGPL, Version 2.1</name>
+			<url>http://www.gnu.de/documents/lgpl-2.1.en.html</url>
+			<distribution>repo</distribution>
+			<comments>
+			For the API documentation of BlueZ:
+			
+ This GNU Lesser General Public License counts as the successor of the GNU Library General Public License. For an explaination of why this change was necessary, read the Why you shouldn't use the Lesser GPL for your next library article.
+
+Copyright © 1991, 1999 Free Software Foundation, Inc.
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. 
+			</comments>
+		</license>
+
+	</licenses>
+	<issueManagement>
+		<url>https://github.com/olir/lbt4j/issues</url>
+		<system>github</system>
+	</issueManagement>
+	<developers>
+		<developer>
+			<id>olir</id>
+			<name>Oliver Rode</name>
+			<url>https://github.com/olir</url>
+			<roles>
+				<role>project administrator</role>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+	<contributors>
+		<!-- No credits so far. -->
+	</contributors>
+
+	<!-- POM Relationships -->
+	<dependencies>
+		<dependency>
+			<groupId>de.serviceflow</groupId>
+			<artifactId>lbt4j</artifactId>
+			<version>0.2.0</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Build Settings -->
+	<build>
+		<plugins>
+			<!-- compile -->
+			<plugin>
+			  <artifactId>maven-antrun-plugin</artifactId>
+			  <executions>
+				<execution>
+				  <id>make</id>
+				  <phase>generate-sources</phase>
+				  <goals>
+					<goal>run</goal>
+				  </goals>
+				  <configuration>
+					<target name="make">
+					  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
+					  <exec executable="make" failonerror="true" dir="${project.basedir}"/>
+					</target>
+				  </configuration>
+				</execution>
+			  </executions>
+			</plugin>			
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.7</version>
+					<dependencies>
+					  <dependency>
+						<groupId>ant-contrib</groupId>
+						<artifactId>ant-contrib</artifactId>
+						<version>1.0b3</version>
+						<exclusions>
+						  <exclusion>
+							<groupId>ant</groupId>
+							<artifactId>ant</artifactId>
+						  </exclusion>
+						</exclusions>
+					  </dependency>
+					  <dependency>
+						<groupId>org.apache.ant</groupId>
+						<artifactId>ant-nodeps</artifactId>
+						<version>1.8.1</version>
+					  </dependency>
+					</dependencies>
+				</plugin>		
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
