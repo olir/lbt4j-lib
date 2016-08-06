@@ -4,7 +4,7 @@
 
 	<!-- Version Dependency Chaining -->
 	<properties>
-		<lbt4j.version>0.2.6</lbt4j.version>
+		<lbt4j.version>0.2.7</lbt4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -12,7 +12,7 @@
 	<!-- Maven Coordinates -->
 	<groupId>de.serviceflow</groupId>
 	<artifactId>lbt4j-lib</artifactId>
-	<version>${lbt4j.version}</version>
+	<version>0.2.7</version>
 	<packaging>rar</packaging>
 
 	<prerequisites>
@@ -172,6 +172,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 					<target name="make">
 					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni">
 						<arg value="-d"/>
+						<arg value="clean"/>
 						<arg value="all"/>
 					  </exec>
 					</target>
