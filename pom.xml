@@ -5,6 +5,8 @@
 	<!-- Version Dependency Chaining -->
 	<properties>
 		<lbt4j.version>0.2.5</lbt4j.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<!-- Maven Coordinates -->
@@ -16,11 +18,6 @@
 	<prerequisites>
 		<maven>3.2.5</maven>
 	</prerequisites>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
 
 	<scm>
 		<connection>scm:git:https://github.com/olir/lbt4j.git</connection>
