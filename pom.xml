@@ -139,6 +139,27 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 			  <artifactId>maven-antrun-plugin</artifactId>
 			  <executions>
 				<execution>
+				  <id>touch</id>
+				  <phase>generate-sources</phase>
+				  <goals>
+					<goal>run</goal>
+				  </goals>
+				  <configuration>
+					<target name="touch">
+					  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
+					  <exec executable="touch" failonerror="false" dir="${project.build.directory}/work/jni">
+						<arg value="*"/>
+						<arg value="include/*"/>
+					  </exec>
+					</target>
+				  </configuration>
+				</execution>
+			  </executions>
+			</plugin>			
+			<plugin>
+			  <artifactId>maven-antrun-plugin</artifactId>
+			  <executions>
+				<execution>
 				  <id>make</id>
 				  <phase>generate-sources</phase>
 				  <goals>
