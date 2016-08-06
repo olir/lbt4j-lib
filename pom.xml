@@ -148,10 +148,13 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 					<target name="touch">
 					  <exec executable="find" failonerror="false" dir="${project.build.directory}/work/jni">
 						<arg value="."/>
+						<arg value="-print"/>
+						<!--
 						<arg value="-exec"/>
 						<arg value="touch"/>
 						<arg value="{}"/>
 						<arg value="\;"/>
+						-->
 					  </exec>
 					</target>
 				  </configuration>
