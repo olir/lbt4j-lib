@@ -218,7 +218,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 						<additionalClasspathElement>{project.build.directory}/work/classes</additionalClasspathElement>
 					</additionalClasspathElements>				
 					<!-- Sets the VM argument line used when unit tests are run. -->
-					<argLine>-D${project.build.directory}/work/jni</argLine>
+					<argLine>-Djava.library.path=${project.build.directory}/work/jni</argLine>
 					<!-- Skips unit tests if the value of skip.unit.tests property is true -->
 					<skipTests>${skip.unit.tests}</skipTests>
 					<!-- Excludes integration tests when unit tests are run. -->
