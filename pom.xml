@@ -214,6 +214,9 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				    <disableXmlReport>true</disableXmlReport>
 				    <useFile>false</useFile>
 				    <forkMode>once</forkMode>
+					<additionalClasspathElements>
+						<additionalClasspathElement>{project.build.directory}/work/classes</additionalClasspathElement>
+					</additionalClasspathElements>				
 					<!-- Sets the VM argument line used when unit tests are run. -->
 					<argLine>-D${project.build.directory}/work/jni</argLine>
 					<!-- Skips unit tests if the value of skip.unit.tests property is true -->
