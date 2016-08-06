@@ -1,8 +1,8 @@
 lbt4j - Linux Bluetooth Library for Java
 ========================================
 
-[![Build Status](https://travis-ci.org/olir/lbt4j.png)](https://travis-ci.org/olir/lbt4j/builds)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.serviceflow/lbt4j/badge.png)](https://maven-badges.herokuapp.com/maven-central/de.serviceflow/lbt4j)
+[![Build Status](https://travis-ci.org/olir/lbt4j-lib.png)](https://travis-ci.org/olir/lbt4j-lib/builds)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.serviceflow/lbt4j-lib/badge.png)](https://maven-badges.herokuapp.com/maven-central/de.serviceflow/lbt4j-lib)
 
 # About
 
