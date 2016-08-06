@@ -2,10 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- Version Dependency Chaining -->
+	<properties>
+		<lbt4j.version>0.2.5</lbt4j.version>
+	</properties>
+
 	<!-- Maven Coordinates -->
 	<groupId>de.serviceflow</groupId>
 	<artifactId>lbt4j-lib</artifactId>
-	<version>0.2.4</version>
+	<version>${lbt4j.version}</version>
 	<packaging>rar</packaging>
 
 	<prerequisites>
@@ -93,7 +98,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 		<dependency>
 			<groupId>de.serviceflow</groupId>
 			<artifactId>lbt4j</artifactId>
-			<version>0.2.4</version>
+			<version>${lbt4j.version}</version>
 		</dependency>	
 		<dependency>
 			<groupId>org.apache.maven</groupId>
@@ -121,7 +126,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 					 <artifactItem>
 					   <groupId>de.serviceflow</groupId>
 					   <artifactId>lbt4j</artifactId>
-					   <version>0.2.0</version>
+					   <version>${lbt4j.version}</version>
 					   <type>jar</type>
 					   <classifier>native</classifier>
 					   <overWrite>true</overWrite>
