@@ -25,8 +25,10 @@ public class TestClient {
 
 	@Test
 	public final void testMain() throws InterruptedException {
-		System.out.println("*** testMain() ***");
-	
+		System.out.println("*** testMain() - compile Test only ***");
+		if (1<2)
+			return;
+		
 		ObjectManager m = ObjectManager.getInstance();
 		ObjectManager.getLogger().setLevel(Level.FINE); 		
 		
