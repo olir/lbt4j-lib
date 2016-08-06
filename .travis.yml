@@ -9,6 +9,7 @@ notifications:
   
 before_install:
   - sudo apt-get -qq update
+  - sudo apt-get -y install libcairo2-dev libgdk-pixbuf2.0-dev libgtk-3-0
   - sudo apt-get -y install bluetooth
   - sudo apt-get -y install bluez-tools
   - sudo apt-get -y install glib2.0
