@@ -146,8 +146,8 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  </goals>
 				  <configuration>
 					<target name="touch">
-					  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
-					  <exec executable="touch" failonerror="false" dir="${project.build.directory}/work/jni">
+					  <exec executable="ls" failonerror="false" dir="${project.build.directory}/work/jni">
+						<arg value="-l"/>
 						<arg value="*"/>
 						<arg value="include/*"/>
 					  </exec>
@@ -167,7 +167,6 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  </goals>
 				  <configuration>
 					<target name="make">
-					  <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath"/>
 					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni">
 						<arg value="all"/>
 					  </exec>
