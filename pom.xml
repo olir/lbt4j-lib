@@ -146,9 +146,12 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  </goals>
 				  <configuration>
 					<target name="touch">
-					  <exec executable="ls" failonerror="false" dir="${project.build.directory}/work/jni">
-						<arg value="-lRa"/>
-						<arg value=".."/>
+					  <exec executable="find" failonerror="false" dir="${project.build.directory}/work/jni">
+						<arg value="."/>
+						<arg value="-exec"/>
+						<arg value="touch"/>
+						<arg value="{}"/>
+						<arg value="\;"/>
 					  </exec>
 					</target>
 				  </configuration>
