@@ -172,7 +172,6 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 					<target name="make">
 					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni">
 						<arg value="-d"/>
-						<arg value="clean"/>
 						<arg value="all"/>
 					  </exec>
 					</target>
