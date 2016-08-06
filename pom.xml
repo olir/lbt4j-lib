@@ -148,6 +148,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 					<target name="touch">
 					  <exec executable="find" failonerror="false" dir="${project.build.directory}/work/jni">
 						<arg value="."/>
+						<arg value="-print"/>
 						<arg value="-exec"/>
 						<arg value="touch"/>
 						<arg value="{}"/>
@@ -170,6 +171,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  <configuration>
 					<target name="make">
 					  <exec executable="make" failonerror="true" dir="${project.build.directory}/work/jni">
+						<arg value="-d"/>
 						<arg value="all"/>
 					  </exec>
 					</target>
