@@ -25,18 +25,21 @@ public class TestClient {
 
 	@Test
 	public final void testMain() throws InterruptedException {
+		System.out.println("*** testMain() ***");
 	
 		ObjectManager m = ObjectManager.getInstance();
 		ObjectManager.getLogger().setLevel(Level.FINE); 		
 		
+		/*
 		m.addObjectManagerSignalListener(createSignalListener());
 		
 		String AGENT_PATH = "/org/bluez/agent";
 		Agent1 agent = new MyAgent(AGENT_PATH);
-
+		
 		System.out.println(" ==> Agent1: " + agent);
 		Thread.sleep(2000);
 		System.out.println(" ==> Agent1: " + agent + " name aquired deathline -----");
+		 */
 
 		System.out.println("*** DUMP ***");
 		m.dump();
