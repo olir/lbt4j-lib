@@ -96,11 +96,13 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 			<groupId>de.serviceflow</groupId>
 			<artifactId>lbt4j</artifactId>
 			<version>${lbt4j.version}</version>
+			<scope>provided</scope>
 		</dependency>	
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-plugin-api</artifactId>
 			<version>2.2.1</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
