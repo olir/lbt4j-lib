@@ -13,7 +13,7 @@
 	<groupId>de.serviceflow</groupId>
 	<artifactId>lbt4j-lib</artifactId>
 	<version>0.3.2</version>
-	<packaging>rar</packaging>
+	<packaging>pom</packaging>
 
 	<prerequisites>
 		<maven>3.2.5</maven>
@@ -250,16 +250,6 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 				  </execution>
 				</executions>
 			</plugin>
-			<!-- TEST -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-rar-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<includeJar>false</includeJar>
-				   <rarSourceDirectory>${project.build.directory}/work/jni</rarSourceDirectory>
-				</configuration>
-			</plugin>			
 		</plugins>
 		<pluginManagement>
 			<plugins>
