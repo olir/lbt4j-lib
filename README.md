@@ -8,4 +8,6 @@ lbt4j - Linux Bluetooth Library for Java
 
 lbt4j is a Java API that offers over a JNI-library access to [BlueZ](http://www.bluez.org/).
 
-This is the build for the native library. For more information go to the Java API project located at [lbt4j](https://github.com/olir/lbt4j).
+This is the project for is for building the native library and testing the compilation. 
+
+For more information about the library go to the Java API project located at [lbt4j](https://github.com/olir/lbt4j).

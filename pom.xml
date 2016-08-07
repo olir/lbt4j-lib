@@ -4,7 +4,7 @@
 
 	<!-- Version Dependency Chaining -->
 	<properties>
-		<lbt4j.version>0.3.1</lbt4j.version>
+		<lbt4j.version>0.3.2</lbt4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -12,7 +12,7 @@
 	<!-- Maven Coordinates -->
 	<groupId>de.serviceflow</groupId>
 	<artifactId>lbt4j-lib</artifactId>
-	<version>0.3.1</version>
+	<version>0.3.2</version>
 	<packaging>rar</packaging>
 
 	<prerequisites>
@@ -231,6 +231,34 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+				  <descriptors>
+					<descriptor>src/assembly/distribution.xml</descriptor>
+				  </descriptors>
+				</configuration>
+			   <executions>
+				  <execution>
+					<id>create-archive</id>
+					<phase>package</phase>
+					<goals>
+					  <goal>single</goal>
+					</goals>
+				  </execution>
+				</executions>
+			</plugin>
+			<!-- TEST -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-rar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<includeJar>false</includeJar>
+				   <rarSourceDirectory>${project.build.directory}/work/jni</rarSourceDirectory>
+				</configuration>
 			</plugin>			
 		</plugins>
 		<pluginManagement>
