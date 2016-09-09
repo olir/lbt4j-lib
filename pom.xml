@@ -4,7 +4,7 @@
 
 	<!-- Version Dependency Chaining -->
 	<properties>
-		<lbt4j.version>0.4.4</lbt4j.version>
+		<lbt4j.version>0.4.5</lbt4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -12,7 +12,7 @@
 	<!-- Maven Coordinates -->
 	<groupId>de.serviceflow</groupId>
 	<artifactId>lbt4j-lib</artifactId>
-	<version>0.4.4</version>
+	<version>0.4.5</version>
 	<packaging>jar</packaging>
 
 	<prerequisites>
