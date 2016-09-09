@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.bluez.Adapter1;
+import org.bluez.Agent1CB;
 import org.bluez.Agent1;
 import org.bluez.AgentManager1;
 import org.bluez.Device1;
@@ -144,7 +145,7 @@ public class TestClient {
 	}
 
 
-	private static final class MyAgent extends Agent1 {
+	private static final class MyAgent extends Agent1CB {
 		private MyAgent(String arg0) {
 			super(arg0);
 		}
